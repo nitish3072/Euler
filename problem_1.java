@@ -1,0 +1,15 @@
+
+public class problem_1 {
+	public static void main(String[] args) {
+		int multiple_3=0, multiple_5=0, multiple_3_5=0;
+		int answer = 0;
+		multiple_3 = 999/3;
+		multiple_5 = 999/5;
+		multiple_3_5 = 999/15;
+		int sum_multiple_3 = multiple_3 * (2*3 + (multiple_3 -1)*3)/2;
+		int sum_multiple_5 = multiple_5 * (2*5 + (multiple_5 -1)*5)/2;
+		int sum_multiple_3_5 = multiple_3_5 * (2*15 + (multiple_3_5 -1)*15)/2;
+		answer = sum_multiple_3 + sum_multiple_5 - sum_multiple_3_5;
+		System.out.println(answer);
+	}
+}
