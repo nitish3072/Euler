@@ -11,7 +11,7 @@ public class problem_59 {
 		
 		int num1=0,num2 = 0,num3 = 0; // 3 numbers will be needed as the encrypt is using alphabets
 		String[] ans = text.split(",");	// Splitting the strings around comma
-		System.out.println(ans[3]);
+		//System.out.println(ans[3]);
 		int[] key = {97,97,97};
 		//System.out.println(ans.length);
 		for(int i=0;i<ans.length;i=i+3) {
