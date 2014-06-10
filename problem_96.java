@@ -73,34 +73,7 @@ public class problem_96 {
 		int[] term = new int[1];
 		term[0] = 0;
 		solvingSudoku(sudoku, boxes, rows, columns, 0, 0,term);
-		/*while(ifsolved(sudoku)==false) {
-			for(int i=0;i<9;i++) {					// Now solving sudoku
-				for(int j=0;j<9;j++) {
-					int num=i/3;
-					int num1=j/3;
-					int boxNumber = num * 3 +  num1;
-					//System.out.println(boxNumber);
-					int common=0;
-					int value=0,rowPos=0,columnPos=0;
-					if(sudoku[i][j]==0) {
-						for(int k=0;k<9;k++) {
-							if(boxes[boxNumber][k]!=0 && rows[i][k]!=0 && columns[j][k]!=0 && boxes[boxNumber][k]==rows[i][k] && boxes[boxNumber][k]==columns[j][k]) {
-								value = boxes[boxNumber][k];
-								rowPos = i;
-								columnPos = j;
-								common++;
-							}
-						}
-						if(common == 1){
-							sudoku[i][j]=value;
-							rows[i][value-1] =0;
-							columns[j][value-1] =0;
-							boxes[boxNumber][value-1]=0;
-						}
-					}
-				}
-			}
-		}*/
+
 		return sudoku;
 	}
 	
@@ -111,26 +84,6 @@ public class problem_96 {
 		return array;
 		
 	}
-	public static boolean ifsolved(int[][] array) {
-		for(int i=0;i<9;i++) {					// Checking if sudoku solved
-			for(int j=0;j<9;j++) {
-				if(array[i][j]==0)
-					return false;
-			}
-		}
-		return true;		
-	}
-/*	public static int solvingSudoku(int[][] sudoku, int[][] boxes, int[][] rows, int[][] columns, int i, int j) {
-		for(int pos=0;pos<9;pos++) {
-			if(rows[i][pos]!=0 && sudoku[i][j] == 0) {
-				if(columns[j][rows[i][pos] - 1] == rows[i][pos] && boxes[(i/3)*3 +j/3][rows[i][pos]-1] == rows[i][pos]) {
-					return solvingSudoku(rows[i][pos], boxes, rows, columns, i, j);
-				}
-				else return 
-			}
-		}
-	}
-}*/
 
 	public static void solvingSudoku(int[][] sudoku, int[][] boxes, int[][] rows, int[][] columns, int i, int j,int[] term) {
 		int tempsudoku,temprows,tempcolumns,tempbox,temp,num,num1,boxNumber,posI,posJ ;
@@ -181,74 +134,3 @@ public class problem_96 {
 		}
 	}
 }
-			
-			
-			
-			
-			
-			
-			
-	/*	if(columns[i][sudoku[j][i] - 1] != sudoku[i][j] && boxes[(i/3)*3 +j/3][sudoku[i][j]-1] != sudoku[i][j]) {	// If the element is not satisfied then go to previous state
-								// Put some allowed value from destination row array
-			pos++;
-			sudoku[i][j] = temp;
-			solvingSudoku(sudoku, boxes, rows, columns, i, j, pos);
-		}
-		else {
-			
-		}
-		/*if(i>=9&&j>=9) 										// To end recurrsion
-			return;
-		else if(sudoku[i][j]==0) {
-			while(i!=10) {									// Put some allowed value from destination row array
-				pos++;
-				if(rows[i][pos] !=0){						// Dont change the sudoku yet, just check if the row element can be put or not
-					break;
-				}
-			}
-			if(columns[i][sudoku[j][i] - 1] == sudoku[i][j] && boxes[(i/3)*3 +j/3][sudoku[i][j]-1] == sudoku[i][j]){	// If the element is satisfied then go to next state.
-				sudoku[i][j] = rows[i][pos];
-				columns[i][sudoku[j][i] - 1] = 0;
-				rows[i][sudoku[i][j] - 1] = 0;
-				boxes[(i/3)*3 +j/3][sudoku[i][j]-1] = 0;
-				if (j == 9) {									// If first row is completed then go to next row by j=0 and i++
-					j = 0;
-					i++;
-					pos = 0;
-				}
-				else j++;
-				solvingSudoku(sudoku, boxes, rows, columns, i, j, 0);	
-				if(i>=9&&j>=9) 										// To end recurrsion
-					return;
-				
-			}
-			else {												// If the element is not satisfied then go to previous state
-				
-			}
-			
-		}
-		else {
-			if (j == 9) {									// If first row is completed then go to next row by j=0 and i++
-				j = 0;
-				i++;
-				pos = 0;
-			}
-			else j++;
-		}*/
-		/*if (j==0) {
-			pos = 0;			
-		}
-		prePos = pos;
-		while(i<9) {
-			if(rows[i][pos]!=0) {
-				sudoku[i][j] =rows[i][j];
-				pos++;
-				columns[i][sudoku[j][i] - 1] = 0;
-				rows[i][sudoku[i][j] - 1] = 0;
-				boxes[(i/3)*3 +j/3][sudoku[i][j]-1] = 0;
-				break;
-			}
-		}
- 		if(boxes[(i/3)*3 +j/3][sudoku[i][j]-1]!=sudoku[i][j] && rows[i][sudoku[i][j] - 1]!=sudoku[i][j] && columns[j][sudoku[i][j] - 1]!=sudoku[i][j]) {
-			
-		}*/
