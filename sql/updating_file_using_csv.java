@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 
-public class testing_csql_connection {
+public class updating_file_using_csv {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException, FileNotFoundException, UnsupportedEncodingException {
 		Connection c = null;
