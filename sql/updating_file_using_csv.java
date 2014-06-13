@@ -47,17 +47,17 @@ public class updating_file_using_csv {
 			sql = "INSERT INTO accidents (states_uts,year_2006,year_2007,year_2008,year_2009,year_2010,year_2011,year_2012)"
 					+ " VALUES ("
 					+ str + ");";
-	        stm.executeUpdate(sql);
+	       		stm.executeUpdate(sql);
 		}
-        System.out.println("Table accidents Updated successfully with the csv file");
-        finding_max_columns(c);
-        population (c);
-        per_capita(c);
-        vehicle_counts(c);
-        accident_per_vehicle(c);
+        	System.out.println("Table accidents Updated successfully with the csv file");
+       		finding_max_columns(c);
+        	population (c);
+        	per_capita(c);
+        	vehicle_counts(c);
+        	accident_per_vehicle(c);
 		s.close();
-        stm.close();
-        c.close();
+        	stm.close();
+        	c.close();
 	}
 	
 	// Finding out top 3 most accident prone states
