@@ -108,9 +108,9 @@ public class updating_file_using_csv {
 			sql = "INSERT INTO population (state_uts, population)"
 					+ " VALUES ("
 					+ str + ");";
-	        stm.executeUpdate(sql);
+	        	stm.executeUpdate(sql);
 		}
-        System.out.println("Table population Updated successfully with the csv file");
+        	System.out.println("Table population Updated successfully with the csv file");
 	}
 	
 	// Finding most accidents prone states per capita
@@ -161,9 +161,9 @@ public class updating_file_using_csv {
 			sql = "INSERT INTO vehicle_counts (state_ut, number)"
 					+ " VALUES ("
 					+ str + "*1000);";
-	        stm.executeUpdate(sql);
+	        	stm.executeUpdate(sql);
 		}
-        System.out.println("Table vehicle_counts Updated successfully with the csv file");
+        	System.out.println("Table vehicle_counts Updated successfully with the csv file");
 	}
 	
 	// Finding which state has most accidents / number of vehicles
